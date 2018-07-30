@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='css/styles.css' type='text/css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css?family=Do+Hyeon" rel="stylesheet">
   <title>Hello Front-End</title>
 </head>
 <body>
@@ -12,12 +14,17 @@
   </section>
   <section class="content">
     <div class="list">
-      <ul>
-        <li><span class="x">X</span>TEST</li>
-        <li><span class="x">X</span>TEST 2</li>
-        <li><span class="x">X</span>TEST 3</li>
+      <ul id='todo'>
       </ul>
     </div>
+    <div class="buttons">
+      <button id="add">Add Todo</button>
+      <div id='new-form'>
+        <input type='text' id='input' placeholder='Todo name'>
+        <button type='button' id='submit'>Add</button>
+      </div>
+    </div>
   </section>
+  <script src="js/scripts.js"></script>
 </body>
 </html>

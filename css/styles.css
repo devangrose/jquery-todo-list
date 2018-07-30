@@ -1,10 +1,54 @@
 body {
-    text-align: center;
+    text-align:center;
+    font-family: 'Do Hyeon',arial;
 }
+h1 {
+    font-size: 3em;
+}
+button,input {
+    background-color: white;
+    border-radius: 3px;
+    border: solid 2px black;
+    padding: 10px;
+    font-size: 1.5em;
+}
+button:hover {
+    background-color: rgba(0,0,0,.1);
+}   
 .list {
-    display: inline-block;
+    text-align: center;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    font-size: 2em;
+}
+.list li {
+    display:inline-block;
     text-align: left;
+    border-bottom: solid 1px black;
+    width: 100%;
+    padding: 10px 0;
+}
+.content {
+    text-align: center;
+}   
+ul {
+    width: 100%;
+    list-style-type: none;
+}
+ul li:last-child {
+    border-bottom: none;
 }
 .x {
-    padding-right: 10px;
+    margin-right: 10px;
+    padding: 3px 10px;
+    border-radius: 2px;
+    color: red;
+}
+.x:hover {
+    background-color: rgba(0,0,0,.4);
+}
+#new-form {
+    margin: 20px;
 }
