@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+}
+.list {
+    display: inline-block;
+    text-align: left;
+}
+.x {
+    padding-right: 10px;
+}
