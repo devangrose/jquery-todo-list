@@ -1,9 +1,10 @@
+var SLIDE_SPEED = 400;
 function initialize() {
     $('#new-form').hide();
     $('.x').on('click',removeLi);
     $('#submit').on('click',makeNewTodo);
     $('#add').on('click',function(){
-        $('#new-form').slideDown(200);
+        $('#new-form').slideDown(SLIDE_SPEED);
     });
     var lis = localStorage.getItem('lis');
     console.log(lis);
@@ -12,9 +13,17 @@ function initialize() {
         if(lis[i].length != 0)
             createLi(lis[i].toString()); 
     }
+    $(document).keypress(function(e) {
+        if(e.which == 13) {
+            var input = $('#input').val();
+            if(input.length > 0){
+                makeNewTodo(); 
+        }
+    }
+});
 }
 function removeLi (){
-    $(this.parentNode).slideUp(200,function(){
+    $(this.parentNode).slideUp(SLIDE_SPEED,function(){
     this.parentNode.removeChild(this);
         storeLis();
     });
@@ -26,8 +35,8 @@ function createLi (title){
     newLi.firstChild.classList.add('x');
     $('ul').append(newLi);
     $('li:last-child').hide();
-    $('li:last-child').slideDown(200,function(){
-        $('#new-form').slideUp(200);
+    $('li:last-child').slideDown(SLIDE_SPEED,function(){
+        $('#new-form').slideUp(SLIDE_SPEED);
         storeLis();
     });
 }
